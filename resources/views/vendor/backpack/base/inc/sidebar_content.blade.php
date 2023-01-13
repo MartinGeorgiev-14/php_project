@@ -7,3 +7,4 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('teacher') }}"><i class="nav-icon la la-question"></i> Teachers</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('organization') }}"><i class="nav-icon la la-question"></i> Organizations</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('settlement') }}"><i class="nav-icon la la-question"></i> Settlements</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('course') }}"><i class="nav-icon la la-question"></i> Courses</a></li>
