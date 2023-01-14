@@ -19,7 +19,7 @@ class ArticleCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-    private function getFieldsData($show = FALSE) {
+   /* private function getFieldsData($show = FALSE) {
         return [
             [
                 'name'=> 'title',

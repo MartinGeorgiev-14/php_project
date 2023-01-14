@@ -36,7 +36,7 @@ class Course extends Model
     */
     public function teachers()
     {
-        return $this->belongsToMany(Tag::class, 'courses_teachers','course_id', 'teacher_id');
+        return $this->belongsToMany(Teacher::class, 'courses_teachers','course_id', 'teacher_id');
     }
 
     /*

@@ -28,8 +28,9 @@ class CourseCrudController extends CrudController
             ],
             [    // SelectMultiple = n-n relationship (with pivot table)
                 'label'     => "Teachers",
-                'type'      => ($show ? "select": 'select_multiple'),
+                'type'      => "select",
                 'name'      => 'teachers', // the method that defines the relationship in your Model
+                'model'     => "App\Models\Teacher",
 // optional
                 'entity'    => 'teachers', // the method that defines the relationship in your Model
                 'model'     => "App\Models\Teacher", // foreign key model
@@ -66,6 +67,8 @@ class CourseCrudController extends CrudController
         CRUD::column('end');
         CRUD::column('created_at');
         CRUD::column('updated_at');
+
+        $this->crud->addColumns($this->getFieldsData(TRUE));
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:

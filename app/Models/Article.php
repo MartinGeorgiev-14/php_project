@@ -68,10 +68,13 @@ public function setImageAttribute($value)
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function teachers()
+ 
+    public function tags()
     {
         return $this->belongsToMany(Tag::class, 'article_tags','article_id', 'tag_id');
     }
+
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES
