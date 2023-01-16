@@ -36,7 +36,17 @@ class Course extends Model
     */
     public function teachers()
     {
-        return $this->belongsToMany(Teacher::class, 'courses_teachers','course_id', 'teacher_id');
+        return $this->belongsTo(Teacher::class, 'teacher_id', 'id');
+    }
+
+    public function organizations()
+    {
+        return $this->belongsTo(Organization::class, 'organization_id', 'id');
+    }
+
+    public function settlements()
+    {
+        return $this->belongsTo(Settlement::class, 'settlement_id', 'id');
     }
 
     /*

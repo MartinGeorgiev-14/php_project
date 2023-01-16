@@ -19,7 +19,7 @@ class ArticleCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-   /* private function getFieldsData($show = FALSE) {
+    private function getFieldsData($show = FALSE) {
         return [
             [
                 'name'=> 'title',
@@ -74,11 +74,11 @@ class ArticleCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        /*CRUD::column('title');
+        CRUD::column('title');
         CRUD::column('content');
         CRUD::column('created_at');
         CRUD::column('updated_at');
-        $this->crud->addColumns($this->getFieldsData(TRUE));*/
+       
 
         $this->crud->set('show.setFromDb', false);
         $this->crud->addColumns($this->getFieldsData(TRUE));

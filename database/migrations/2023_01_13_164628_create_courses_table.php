@@ -19,7 +19,9 @@ return new class extends Migration
             $table->date('date');
             $table->time('start');
             $table->time('end');
-            
+            $table->integer('teacher_id')->unsigned();
+            $table->integer('organization_id')->unsigned();
+            $table->integer('settlement_id')->unsigned();
             $table->timestamps();
         });
     }

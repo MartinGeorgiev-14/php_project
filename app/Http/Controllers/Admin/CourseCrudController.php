@@ -26,19 +26,42 @@ class CourseCrudController extends CrudController
                 'label' => 'Title',
                 'type'=> 'text'
             ],
-            [    // SelectMultiple = n-n relationship (with pivot table)
-                'label'     => "Teachers",
+            [   
+                'label'     => "Teacher",
                 'type'      => "select",
-                'name'      => 'teachers', // the method that defines the relationship in your Model
-                'model'     => "App\Models\Teacher",
-// optional
-                'entity'    => 'teachers', // the method that defines the relationship in your Model
-                'model'     => "App\Models\Teacher", // foreign key model
-                'attribute' => 'name', // foreign key attribute that is shown to user
-                'pivot'     => true, // on create&update, do you need to add/delete pivot table entries?
+                'name'      => 'teachers', 
+               
+
+                'entity'    => 'teachers', 
+                'model'     => "App\Models\Teacher", 
+                'attribute' => 'name', 
+                'pivot'     => true, 
+            ],
+            [   
+                'label'     => "Organization",
+                'type'      => "select",
+                'name'      => 'organizations', 
+               
+
+                'entity'    => 'organizations', 
+                'model'     => "App\Models\Organization", 
+                'attribute' => 'name', 
+                'pivot'     => true, 
+            ],
+            [   
+                'label'     => "Settlement",
+                'type'      => "select",
+                'name'      => 'settlements', 
+               
+
+                'entity'    => 'settlements', 
+                'model'     => "App\Models\Settlement", 
+                'attribute' => 'name', 
+                'pivot'     => true, 
             ]
         ];
     }
+
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -65,10 +88,13 @@ class CourseCrudController extends CrudController
         CRUD::column('date');
         CRUD::column('start');
         CRUD::column('end');
+        $this->crud->set('show.setFromDb', false);
+        $this->crud->addColumns($this->getFieldsData(TRUE));
         CRUD::column('created_at');
         CRUD::column('updated_at');
 
-        $this->crud->addColumns($this->getFieldsData(TRUE));
+   
+
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
