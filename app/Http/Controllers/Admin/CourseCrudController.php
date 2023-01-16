@@ -85,7 +85,12 @@ class CourseCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('title');
-        CRUD::column('date');
+        CRUD::addColumn([
+            'name'              => 'date',
+            'label'             => 'Date',
+            'type'              => 'datetime',
+            'format'            => 'DD.MM.YYYY',
+        ]);
         CRUD::column('start');
         CRUD::column('end');
         $this->crud->set('show.setFromDb', false);
