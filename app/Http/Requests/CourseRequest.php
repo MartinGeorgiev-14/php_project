@@ -26,9 +26,9 @@ class CourseRequest extends FormRequest
     {
         return [
             'title' => 'required|min:5|max:50',
-            'date' => 'required|after:01/01/2023|before:03/15/2023', // mm/dd/yyyy  after: 01/01/2023   before: 15/03/2023
-            'start' => 'required|after:08:15|before:20:00',
-            'end' => 'required|after:08:15|before:20:00',
+            'date' => 'required|after_or_equal:01/01/2023|before_or_equal:03/15/2023', // mm/dd/yyyy  after: 01/01/2023   before: 15/03/2023
+            'start' => 'required|after_or_equal:08:15|before_or_equal:20:00',
+            'end' => 'required|after_or_equal:08:15|before_or_equal:20:00',
             'teachers' => 'required|',
             'organizations' => 'required|',
             'settlements' => 'required|',
@@ -57,13 +57,13 @@ class CourseRequest extends FormRequest
         return [
             'title.required' => 'Please enter title between 5 and 50 characters.',
             'date.required' => 'Please enter date between 01/01/2023 and 15/03/2023.',
-            'date.after' => 'Please enter date after 01/01/2023.',
-            'date.before' => 'Please enter date before 15/03/2023.',
+            'date.after_or_equal' => 'Please enter date after 01/01/2023.',
+            'date.before_or_equal' => 'Please enter date before 15/03/2023.',
             'start.required' => 'Please enter time between 08:15 and 20:00.',
-            'start.after' => 'Please enter time after 08:15.',
-            'start.before' => 'Please enter time before 20:00.',
-            'end.after' => 'Please enter time after 08:15.',
-            'end.before' => 'Please enter time before 20:00.',
+            'start.after_or_equal' => 'Please enter time after 08:15.',
+            'start.before_or_equal' => 'Please enter time before 20:00.',
+            'end.after_or_equal' => 'Please enter time after 08:15.',
+            'end.before_or_equal' => 'Please enter time before 20:00.',
             'teachers.required' => "Please choose teacher.",
             'organizations.required' => "Please choose organization.",
             'settlements.required' => 'Please choose settlement.'
