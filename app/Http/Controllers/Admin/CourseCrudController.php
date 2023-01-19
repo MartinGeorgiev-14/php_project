@@ -26,6 +26,12 @@ class CourseCrudController extends CrudController
                 'label' => 'Title',
                 'type'=> 'text'
             ],
+            [
+                'name' => 'info',
+                'label' => 'Info',
+                'type' => ($show ? "text": 'summernote'),
+                'view' => 'partials/richtext'
+            ],
             [   
                 'label'     => "Teacher",
                 'type'      => "select",
@@ -58,6 +64,14 @@ class CourseCrudController extends CrudController
                 'model'     => "App\Models\Settlement", 
                 'attribute' => 'name', 
                 'pivot'     => true, 
+            ],
+            [
+                'label' => "Resources",
+                'name' => "file",
+                'type' => 'upload',
+                //'type' => ($show ? 'view' : 'upload'),
+                'view' => 'partials/file',
+                'upload' => true,
             ]
         ];
     }
@@ -85,18 +99,29 @@ class CourseCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('title');
+        CRUD::column('info');
         CRUD::addColumn([
             'name'              => 'date',
             'label'             => 'Date',
             'type'              => 'datetime',
-            'format'            => 'DD.MM.YYYY',
+            'format'            => 'HH:MM:SS DD-MM-YYYY',
         ]);
         CRUD::column('start');
         CRUD::column('end');
         $this->crud->set('show.setFromDb', false);
         $this->crud->addColumns($this->getFieldsData(TRUE));
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+        CRUD::addColumn([
+            'name'              => 'created_at',
+            'label'             => 'Created',
+            'type'              => 'datetime',
+            'format'            => 'HH:MM:SS DD-MM-YYYY',
+        ]);
+        CRUD::addColumn([
+            'name'              => 'updated_at',
+            'label'             => 'Updated',
+            'type'              => 'datetime',
+            'format'            => 'HH:MM:SS DD-MM-YYYY',
+        ]);
 
    
 

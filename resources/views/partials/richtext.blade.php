@@ -1,3 +1,3 @@
-@if(isset($entry->content))
+@if(isset($entry->info))
    {!!$entry->content!!}
 @endif

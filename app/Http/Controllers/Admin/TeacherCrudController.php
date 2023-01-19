@@ -41,8 +41,18 @@ class TeacherCrudController extends CrudController
     {
         CRUD::column('name');
         CRUD::column('slug');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+        CRUD::addColumn([
+            'name'              => 'created_at',
+            'label'             => 'Created',
+            'type'              => 'datetime',
+            'format'            => 'HH:MM:SS DD-MM-YYYY',
+        ]);
+        CRUD::addColumn([
+            'name'              => 'updated_at',
+            'label'             => 'Updated',
+            'type'              => 'datetime',
+            'format'            => 'HH:MM:SS DD-MM-YYYY',
+        ]);
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:

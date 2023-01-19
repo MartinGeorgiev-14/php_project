@@ -32,6 +32,7 @@ class CourseRequest extends FormRequest
             'teachers' => 'required|',
             'organizations' => 'required|',
             'settlements' => 'required|',
+            'file' => 'mimes:rar,7z,pdf,docx,pptx,xlsx|file|max:20480'
         ];
     }
 
@@ -66,7 +67,9 @@ class CourseRequest extends FormRequest
             'end.before_or_equal' => 'Please enter time before 20:00.',
             'teachers.required' => "Please choose teacher.",
             'organizations.required' => "Please choose organization.",
-            'settlements.required' => 'Please choose settlement.'
+            'settlements.required' => 'Please choose settlement.',
+            'file.mimes' => 'Please choose the correct format file (rar, 7z, pdf, docx, pptx or xlsx).',
+            'file.max' => "The max size for file is 20 megabytes."
         ];
     }
 }
