@@ -69,7 +69,6 @@ class CourseCrudController extends CrudController
                 'label' => "Resources",
                 'name' => "file",
                 'type' => 'upload',
-                //'type' => ($show ? 'view' : 'upload'),
                 'view' => 'partials/file',
                 'upload' => true,
             ]
@@ -104,7 +103,7 @@ class CourseCrudController extends CrudController
             'name'              => 'date',
             'label'             => 'Date',
             'type'              => 'datetime',
-            'format'            => 'HH:MM:SS DD-MM-YYYY',
+            'format'            => 'DD-MM-YYYY',
         ]);
         CRUD::column('start');
         CRUD::column('end');
