@@ -37,6 +37,7 @@ You have to modify these variables:
 ### Commands
 
 Commands that have to run inside of the project folder:
+
     composer install
     php artisan migrate
     php artisan db:seed --class=UsersSeeder
