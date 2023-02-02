@@ -38,9 +38,9 @@ You have to modify these variables:
 
 Commands that have to run inside of the project folder:
 
-php artisan migrate
-php artisan db:seed --class=UsersSeeder
-php artisan db:seed --class=SettlementsSeeder
-php artisan db:seed --class=TeachersSeeder
-php artisan db:seed --class=OrganizationsSeeder
-php artisan db:seed --class=CoursesSeeder
+        php artisan migrate
+        php artisan db:seed --class=UsersSeeder
+        php artisan db:seed --class=SettlementsSeeder
+        php artisan db:seed --class=TeachersSeeder
+        php artisan db:seed --class=OrganizationsSeeder
+        php artisan db:seed --class=CoursesSeeder
