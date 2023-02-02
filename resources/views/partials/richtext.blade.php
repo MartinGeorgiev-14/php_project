@@ -1,3 +1,3 @@
 @if(isset($entry->info))
-   {!!$entry->content!!}
+{{!!$entry->content!!}}
 @endif

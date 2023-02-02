@@ -3,18 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Course;
+use App\Models\Teacher;
+use App\Models\Organization;
+use App\Models\Settlement;
 class IndexController extends Controller
 {
     public function index() {
         //Get data from DB in here and pass it to the view
 
-        return view('index.index', [
-            'title' => 'Laravel Project about us',
-            'text' => '<p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
-            </p>',
-            'imgURL' => 'assets/images/about/about-part.jpg',
-        ]);
+       // $data = Course::with(['teachers' => function($query){
+       // $query->select('name');}])->get();
+       
+        $data = Course::all();
+        $dataTeacher = Teacher::all();
+        $dataOrganization = Organization::all();
+        $dataSettlement = Settlement::all();
+
+       return view('index.index', compact('data', 'dataTeacher', 'dataOrganization', 'dataSettlement'));
     }
 }

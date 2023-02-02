@@ -206,13 +206,7 @@ html,body{
 .navbar-brand:focus{
 	margin-top: 33px;
 	padding:0;
-	color: white;
 }/* navbar-brand */
-
-.navbar-default .navbar-brand 
-{
-	color:white;
-}
 
 /* wrapper-sticky */
 .wrapper-sticky{
@@ -231,7 +225,6 @@ html,body{
 
 .sticky  .navbar-brand{
 	margin-top:20px;
-	color:white;
 }
 .sticky  .navbar-default .navbar-nav li a,
 .sticky  .navbar-default .navbar-nav li a:active,
@@ -248,20 +241,16 @@ html,body{
     margin-top: 15px;
 }/* sticky */
 
-
-
-
 /* wrapper-sticky */
 
 /* navbar-default */
 .navbar-default {
     background-color: transparent;
     border-color: transparent;
-	
 }
 .navbar-default .navbar-nav li a{
 	font-size: 16px;
-	color: white;
+	color: #fff;
 	font-family: 'Lato', sans-serif;
 	margin-top:18px;
 	padding-left: 27px;
@@ -1957,7 +1946,7 @@ a:active.learn-btn{
 	color:#908edf;
 	border:1px solid #908edf;
 }
-/*-blog button-*/
+/*-blog button-*/\
 
 /*pagination*/
 .pagination-part {
@@ -2231,11 +2220,6 @@ a:active.learn-btn{
     color: #fff;
 	border:1px solid #7370d8;
 	border-radius:50%;
-}
-
-.learn-h1 
-{
-	color:white;
 }
 
 /*========================Thank you=================

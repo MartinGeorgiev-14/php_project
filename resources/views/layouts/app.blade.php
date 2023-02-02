@@ -18,11 +18,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 		
         <!-- TITLE OF SITE -->
-        <title>Zombiz</title>
+        <title>LearnMore!</title>
 
         <!-- for title img -->
 		<link rel="shortcut icon" type="image/icon" href="assets/images/logo/favicon.png"/>
        
+		<!-- My style -->
+		<link rel="stylesheet" href="resources\views\layouts\app.blade.php">
+
         <!--font-awesome.min.css-->
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		
@@ -71,11 +74,70 @@
         <![endif]-->
 
 		
-		
+		<!--menu start-->
+		<section id="menu">
+			<div class="container">
+				<div class="menubar">
+					<nav class="navbar navbar-default">
+					
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html">
+							
+							<h1 style="color:white;">LearnMore!</h1>
+							</a>
+						</div><!--/.navbar-header -->
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li class="smooth-menu">
+									<a href="#home">Home</a>
+								</li>
+								<li class="smooth-menu"><a href="#about">About</a></li>
+								<li class="smooth-menu"><a href="#service">Service</a></li>
+								<li class="smooth-menu"><a href="#project">Project</a></li>
+								<li class="smooth-menu"><a href="#team">Team</a></li>
+								<li class="smooth-menu"><a href="#blog">Blog</a></li>
+								<li class="smooth-menu"><a href="#contact">Contact</a></li>
+								<li>
+
+								</li>
+								<li class="search">
+									<form action="">
+										<input type="text" name="search" placeholder="Search....">
+										<a href="#">
+											<span class="lnr lnr-magnifier"></span>
+										</a>
+									</form>
+								</li>
+							</ul><!-- / ul -->
+						</div><!-- /.navbar-collapse -->
+					</nav><!--/nav -->
+				</div><!--/.menubar -->
+			</div><!-- /.container -->
+
+		</section><!--/#menu-->
+		<!--menu end-->
 		
 
-		<!--hm-footer start-->
-		<section class="hm-footer">
+
+		<!--about-us start -->
+		<section id="about" class="about-us">
+			@yield('content')
+
+		</section><!--/.about-us-->
+		<!--about-us end -->
+
+
+	<!--hm-footer start-->
+	<section class="hm-footer">
 			<div class="container">
 				<div class="hm-footer-details">
 					<div class="row">
@@ -83,9 +145,7 @@
 							<div class="hm-footer-widget">
 								<div class="hm-foot-title ">
 									<div class="logo">
-										<a href="index.html">
-											<img src="assets/images/logo/logo.png" alt="logo" />
-										</a>
+									<h1 style="color:white;">LearnMore!</h1>
 									</div><!-- /.logo-->
 								</div><!--/.hm-foot-title-->
 								<div class="hm-foot-para">
