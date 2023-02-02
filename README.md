@@ -1,6 +1,6 @@
 ## About
 
-LearnMore! is a project about managin courses.
+LearnMore! is a project about managing courses.
 
 ### Admin panel
 
